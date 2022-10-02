@@ -43,7 +43,7 @@ int wait_fun(pid_t pid, int child_count, int returnStatus, char *copyforhash)
  * recent process
  *
  */
-int _process(char *envp[], char *argv[], char *path, char *tempforfindfile)
+int _process(char *argv[], char *path, char *tempforfindfile)
 {
 	int returnStatus = 0, hash_flag = 0, first_element = 0;
 	int comment = 0, i = 0, child_count = 0, result = 0, flag = 0;
@@ -74,7 +74,7 @@ int _process(char *envp[], char *argv[], char *path, char *tempforfindfile)
 				break;
 			else if (pid == 0)
 			{
-				result = execve(argv[first_element], argv + first_element, envp);
+				result = execve(argv[first_element], argv + first_element, NULL);
 				if (result < 0)
 					break;
 			}

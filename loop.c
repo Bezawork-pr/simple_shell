@@ -154,7 +154,7 @@ int loop(char *envp[], char *copy_PATH, char *copy_PWD,
 				else
 				{
 					does_file_exist(copy_PATH, argv_here, tempforfindfile);
-					status = _process(envp, argv_here, copy_PATH, tempforfindfile);
+					status = _process(argv_here, copy_PATH, tempforfindfile);
 				}
 			}
 		}
