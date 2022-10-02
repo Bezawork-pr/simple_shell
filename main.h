@@ -43,7 +43,7 @@ void prompt_icon(void);
 void _write_to_STDOUT(char *_input);
 int _strcmp(char *f_string, char *s_string);
 char *_changegetlength(char *src);
-int _process(char *argv[], char *path, char *tempforfindfile);
+int _process(char *envp[], char *argv[], char *path, char *tempforfindfile);
 void separator_getline(char *argv[], char *string);
 char *_strncpy_fromn(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
